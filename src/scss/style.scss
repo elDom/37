@@ -1,0 +1,110 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    //border: 1px solid red;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+header{
+    background-color: #444;
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-position: 10% 100%;
+    background-size: cover;
+    height: 96vh;
+    & > a{
+        display: inline-block;
+        width: 13%;
+        height: 70px;
+        background-image: url("../img/logo.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        float: left;
+    }
+    & > nav{
+        width: 74%;
+        display: inline-block;
+        float: left;
+        margin-top: 50px;
+        ul{
+            float: right;
+            list-style: none;
+            li{
+                display: inline-block;
+                float: left;
+                &::after{
+                    content: "";
+                    display: inline-block;
+                    float: left;
+                    width: 0%;
+                    height: 1px;
+                    background-color: #fff;
+                    transition: all 0.5s;
+                }
+                &:hover::after, &:active::after{
+                    width: 100%;
+                }
+                margin-right: 7px;
+                &:last-child{
+                    margin-right: -5px;
+                }
+                a{
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    font-weight: 600;
+                    padding: 5px;
+                }
+            }
+        }
+    }
+    & > div{
+        width: 13%;
+        display: inline-block;
+        float: left;
+        margin-top: 45px;
+        text-align: center;
+        a{
+            display: inline-block;
+            height: 21px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0px 10px;
+            &:first-child{
+                background-image: url("../img/search.png");
+                width: 20px;
+            }
+            &:last-child{
+                background-image: url("../img/fb.png");
+                width: 11px;
+            }
+        }
+    }
+    .skater{
+        background-image: url("../img/skater.png");
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: auto 105%;
+        margin: 0px;
+        border: 1px solid red;
+        clear: both;
+        float: right;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+main{
+    height: 100vh;
+    clear: both;
+}
+
+footer{
+    height: 100vh;
+}
