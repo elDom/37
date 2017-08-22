@@ -4,40 +4,51 @@
 <head>
 	<title>37</title>
 	<!-- build:css -->
-		<link rel="stylesheet" type="text/css" href="css/materialize.css">
-		<link rel="stylesheet" type="text/css" href="css/style.css">	
+	<link rel="stylesheet" type="text/css" href="css/materialize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<!-- endbuild -->
 </head>
 
 <body>
-	<header>
-		<a href="#home"></a>
+
+	<div class="navbar-fixed">
 		<nav>
-			<ul>
-				<li><a href="#home">home</a></li>
-				<li><a href="#aboutus">about us</a></li>
-				<li><a href="#team">team</a></li>
-				<li><a href="#service">service</a></li>
-				<li><a href="#process">process</a></li>
-				<li><a href="#clients">clients</a></li>
-				<li><a href="#work">work</a></li>
-			</ul>
+			<div class="nav-wrapper">
+				<a href="#home" class="brand-logo">LOGO</a>
+				<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<li><a href="#home">home</a></li>
+					<li><a href="#aboutus">about us</a></li>
+					<li><a href="#team">team</a></li>
+					<li><a href="#service">service</a></li>
+					<li><a href="#process">process</a></li>
+					<li><a href="#clients">clients</a></li>
+					<li><a href="#work">work</a></li>
+				</ul>
+				<ul class="side-nav" id="mobile-menu">
+					<li><a href="#home">home</a></li>
+					<li><a href="#aboutus">about us</a></li>
+					<li><a href="#team">team</a></li>
+					<li><a href="#service">service</a></li>
+					<li><a href="#process">process</a></li>
+					<li><a href="#clients">clients</a></li>
+					<li><a href="#work">work</a></li>
+				</ul>
+			</div>
 		</nav>
-		<div>
-			<a href="#"></a>
-			<a href="http://facebook.com" target="_blank"></a>
-		</div>
-		<div class="skater"></div>
-	</header>
+	</div>
+
 	<main>
 
 	</main>
 	<footer>
 		<!-- build:js -->
-			<script src="js/materialize.js"></script>
-			<script src="js/script.js"></script>			
+		<script src="js/jquery-3.2.1.js"></script>
+		<script src="js/materialize.js"></script>
+		<script src="js/script.js"></script>
 		<!-- endbuild -->
 	</footer>
+
 </body>
 
 </html>
