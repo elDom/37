@@ -18,6 +18,10 @@ $(document).ready(function(){
 			$(".icon-menu").css("padding-top", "0px");
 		}
     });
+
+    $('.scrollspy').scrollSpy({
+        scrollOffset:100,
+    });
 });
 
 $(window).scroll(function() {
