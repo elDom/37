@@ -21,8 +21,8 @@ $(document).ready(function(){
 });
 
 $(window).scroll(function() {
-    if ($(".fixed-menu").offset().top > 50) {
-        $(".fixed-menu").css( "background-color", "rgb(50, 30, 30)" );
+    if ($(".fixed-menu").offset().top > 200) {
+        $(".fixed-menu").css( "background-color", "rgba(90, 0, 20, 0.98)" );
     }else{
         $(".fixed-menu").css( "background-color", "transparent" );
     }
