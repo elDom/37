@@ -1,0 +1,102 @@
+html, body{
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+.fixed-menu{
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    transition: all 0.5s;
+    div{
+        height: 100%;
+    }
+}
+
+.logo{
+    width: 142px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center center;
+}
+
+.menu{
+    text-align: right;
+    padding-top: 30px;
+    a{
+        color: #fff;
+        display: inline-block;
+        padding: 10px;
+        text-transform: uppercase;
+        font-weight: 500;
+        &::after{
+            content: "";
+            display: block;
+            width: 0%;
+            height: 1px;
+            background: #fff;
+            transition: all 0.5s;
+        }
+        &:hover::after, &:active::after, &.active::after{
+            width: 100%;
+        }
+    }
+}
+
+.icons{
+    text-align: center;
+    padding-top: 36px;    
+    a{
+        display: inline-block;
+        position: relative;
+        width: 22px;
+        height: 22px;
+        margin-left: 5px;
+        margin-right: 5px;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+    }
+    .icon-menu{
+        overflow: hidden;
+        padding-top: 3px;
+        transition: all 0.5s;
+        .pas{
+            width: 22px;
+            height: 2px;
+            margin-top: 2px;
+            background: #fff;
+            transition: all 0.5s;
+        }
+    }
+    .icon-search{
+        background-image: url("../img/search.png");
+    }
+    .icon-facebook{
+        background-image: url("../img/fb.png");
+    }
+}
+
+header.row{
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-bottom: 400px;
+}
+
+
+
+
+
+
+
+.col{
+    border: 1px solid red;
+}

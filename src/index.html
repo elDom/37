@@ -3,6 +3,11 @@
 
 <head>
 	<title>37</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="template 37">
+	<meta name="keywords" content="HTML, CSS, JavaScript, jQuery, Materialize, Bootstrap, Gulp, GIT">
+	<meta name="author" content="Dominik">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- build:css -->
 	<link rel="stylesheet" type="text/css" href="css/materialize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -11,36 +16,45 @@
 
 <body>
 
-	<div class="navbar-fixed">
-		<nav>
-			<div class="nav-wrapper">
-				<a href="#home" class="brand-logo">LOGO</a>
-				<a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="#home">home</a></li>
-					<li><a href="#aboutus">about us</a></li>
-					<li><a href="#team">team</a></li>
-					<li><a href="#service">service</a></li>
-					<li><a href="#process">process</a></li>
-					<li><a href="#clients">clients</a></li>
-					<li><a href="#work">work</a></li>
-				</ul>
-				<ul class="side-nav" id="mobile-menu">
-					<li><a href="#home">home</a></li>
-					<li><a href="#aboutus">about us</a></li>
-					<li><a href="#team">team</a></li>
-					<li><a href="#service">service</a></li>
-					<li><a href="#process">process</a></li>
-					<li><a href="#clients">clients</a></li>
-					<li><a href="#work">work</a></li>
-				</ul>
+	<div class="fixed-menu">
+		<div class="row">
+			<div class="col s8 m9 l2">
+				<div class="logo"></div>
 			</div>
-		</nav>
+			<div class="col s12 m12 l8 hide-on-med-and-down">
+				<div class="menu">
+					<a href="#home" class="active">home</a>
+					<a href="#aboutus">about us</a>
+					<a href="#team">team</a>
+					<a href="#service">service</a>
+					<a href="#process">process</a>
+					<a href="#clients">clients</a>
+					<a href="#work">work</a>
+				</div>
+			</div>
+			<div class="col s4 m3 l2">
+				<div class="icons">
+					<a class="icon-menu hide-on-large-only">
+						<div class="pas"></div>
+						<div class="pas"></div>
+						<div class="pas"></div>
+						<div class="pas"></div>
+					</a>
+					<a href="#" class="icon-search hide-on-med-and-down"></a>
+					<a href="#" class="icon-facebook hide-on-med-and-down"></a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<main>
-
+		<header class="row">
+			<div class="col s12">
+				think outside of the box
+			</div>
+		</header>
 	</main>
+
 	<footer>
 		<!-- build:js -->
 		<script src="js/jquery-3.2.1.js"></script>
