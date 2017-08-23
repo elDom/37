@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 $(window).scroll(function() {
     if ($(".fixed-menu").offset().top > 50) {
-        $(".fixed-menu").css( "background-color", "rgba(50, 30, 30, 1)" );
+        $(".fixed-menu").css( "background-color", "rgb(50, 30, 30)" );
     }else{
         $(".fixed-menu").css( "background-color", "transparent" );
     }
