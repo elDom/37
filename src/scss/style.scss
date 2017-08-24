@@ -221,8 +221,25 @@ main{
         }
     }
     #team{
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #bc2e3a;
+            width: 50vh;
+            height: 50vh;
+            top: 20vh;
+            left: -50vh;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+        }
         h1{
             margin-top: 5vh;
+        }
+        .panels{
+            
         }
     }
     h1{
