@@ -1,3 +1,7 @@
+jQuery(window).on("load",function(){
+    //jQuery(".preloader").fadeOut();
+});
+
 $(document).ready(function(){
 
     iconMenu=0;
