@@ -12,6 +12,9 @@ $(document).ready(function(){
 			$(".pas:eq(1) , .pas:eq(2)").css("margin-top", "2px");
 			$(".pas:eq(1) , .pas:eq(2)").css("width", "22px");
 			$(".icon-menu").css("padding-top", "3px");
+            //when unclicked
+            $(".mobile-menu").css("height", "0vh");
+            $(".mobile-menu").css("background", "transparent");
 		}else{
             $(".pas:eq(0) , .pas:eq(3)").css("opacity", "0");
 			$(".pas").eq(1).css("transform", "rotate(45deg)");
@@ -20,7 +23,14 @@ $(document).ready(function(){
             $(".pas").eq(2).css("margin-top", "-2px");
 			$(".pas:eq(1) , .pas:eq(2)").css("width", "24px");
 			$(".icon-menu").css("padding-top", "0px");
+            //when clicked
+            $(".mobile-menu").css("height", "100vh");
+            $(".mobile-menu").css("background", "#5a0014");
 		}
+    });
+
+    $(".mobile-menu a").click(function(){
+        $(".icon-menu").click();
     });
 
     $('.scrollspy').scrollSpy({
