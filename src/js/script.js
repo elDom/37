@@ -49,15 +49,23 @@ $(document).ready(function () {
     var owl = $('.owl-carousel');
     owl.owlCarousel({
         loop: true,
-        items: 3,
+        items: 1,
         center: true,
         autoplay: true,
         autoplayHoverPause: true,
+        responsive : {
+            455 : {
+                items: 2,
+            },
+            1200 : {
+                items: 3,
+            },
+        }
     });
     $('#process .fa-caret-left').click(function() {
         owl.trigger('prev.owl.carousel');
     });
-    $('#process .fa-caret-right').click(function() {
+    $('#process .fa-caret-right, #process .owl-item').click(function() {
         owl.trigger('next.owl.carousel');
     });
 

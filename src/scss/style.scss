@@ -360,10 +360,17 @@ main{
     #process{
         .carousel{
             position: relative;
+            .fa{
+                opacity: 0.8;
+                transition: all 0.3s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
             .fa-caret-left{
                 position: absolute;
                 left: 0px;
-                top: 25%;
+                top: 30%;
                 transform: translateY(50%);
                 font-size: 4em;
                 z-index: 1;
@@ -372,7 +379,7 @@ main{
             .fa-caret-right{
                 position: absolute;
                 right: 0px;
-                top: 25%;
+                top: 30%;
                 transform: translateY(50%);
                 font-size: 4em;
                 z-index: 1;
@@ -383,12 +390,76 @@ main{
             .owl-item{
                 &>div{
                     padding: 60px;
-                    transition: all 0.5s;
+                    opacity: 0.6;
+                    transition: all 0.3s;
+                    .caption{
+                        width: calc(100% - 200px) !important;
+                        height: 30px !important;
+                        position: absolute;
+                        bottom: 80px;
+                        left: 100px;
+                        background: #444;
+                        transform: skewX(30deg);
+                        p{
+                            transform: skewX(-30deg);
+                            font-weight: 600;
+                            color: #fff;
+                            margin: 4px 0px 0px 0px;
+                            padding: 0;
+                            text-align: center;
+                            @media screen and (max-width: 800px) {
+                                & {
+                                    font-size: 0.8em;
+                                }
+                            }
+                        }
+                    }
                 }
                 &.center{
                     &>div{
                         padding: 0px;
-                        transition: all 0.5s;
+                        transition: all 0.3s;
+                        opacity: 1;
+                        .caption{
+                            width: calc(100% - 100px) !important;
+                            height: 50px !important;
+                            bottom: 30px;
+                            left: 50px;
+                            transform: skewX(30deg);
+                            p{
+                                font-size: 1.5em;
+                                &::before{
+                                    content: "";
+                                    width: calc(100% - 100px);
+                                    height: 30px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 36px;
+                                    left: 60px;
+                                    transform: skewX(30deg);
+                                    background: #BC2E39;
+                                    z-index: 2;
+                                    @media screen and (max-width: 992px) {
+                                        & {
+                                            width: calc(100% - 50px);
+                                            left: 40px;
+                                        }
+                                    }
+                                }
+                                &::after{
+                                    content: "Designer";
+                                    width: calc(100% - 100px);
+                                    height: 30px;
+                                    display: inline-block;
+                                    position: absolute;
+                                    top: 38px;
+                                    left: 60px;
+                                    font-weight: 400;
+                                    font-size: 0.7em;
+                                    z-index: 2;
+                                }
+                            }
+                        }
                     }
                 }
             }
