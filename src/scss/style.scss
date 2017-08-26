@@ -23,7 +23,8 @@ $menuHeight: 100px;
 html, body{
     width: 100%;
     font-size: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
+    position: relative;
     box-sizing: border-box;
 }
 
@@ -294,6 +295,15 @@ main{
     }
     #service{
         position: relative;
+        margin-top: -20px;
+        background-image: url("../img/service.png");
+        background-position: center right;
+        background-repeat: no-repeat;
+        @media screen and (max-width: 992px) {
+            & {
+                background-image: none;
+            }
+        }
         &::before{
             content: "";
             display: block;
@@ -308,9 +318,10 @@ main{
             transform: rotate(45deg);
             z-index: -1;
         }
+        /* nie dziala overflow hidden
         &::after{
             content: "";
-            display: block;
+            display: inline-block;
             position: absolute;
             background: #bc2e3a;
             width: 100vh;
@@ -327,6 +338,7 @@ main{
                 }
             }
         }
+        */
         p, h1, .readmore{
             mix-blend-mode: screen;
         }
@@ -346,6 +358,27 @@ main{
         }
     }
     #process{
+        .carousel{
+            position: relative;
+            .fa-caret-left{
+                position: absolute;
+                left: 0px;
+                top: 25%;
+                transform: translateY(50%);
+                font-size: 4em;
+                z-index: 1;
+                cursor: pointer;
+            }
+            .fa-caret-right{
+                position: absolute;
+                right: 0px;
+                top: 25%;
+                transform: translateY(50%);
+                font-size: 4em;
+                z-index: 1;
+                cursor: pointer;
+            }
+        }
         .owl-carousel{
             .owl-item{
                 &>div{

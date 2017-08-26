@@ -46,12 +46,19 @@ $(document).ready(function () {
     });
 
 
-    $('.owl-carousel').owlCarousel({
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
         loop: true,
         items: 3,
         center: true,
         autoplay: true,
         autoplayHoverPause: true,
-    })
+    });
+    $('#process .fa-caret-left').click(function() {
+        owl.trigger('prev.owl.carousel');
+    });
+    $('#process .fa-caret-right').click(function() {
+        owl.trigger('next.owl.carousel');
+    });
 
 });
