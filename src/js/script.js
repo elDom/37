@@ -2,6 +2,14 @@ jQuery(window).on("load",function(){
     jQuery(".preloader").fadeOut();
 });
 
+$(window).on("scroll load",function() {
+    if ($(".fixed-menu").offset().top > 200) {
+        $(".fixed-menu").css( "background-color", "rgba(90, 0, 20, 0.98)" );
+    }else{
+        $(".fixed-menu").css( "background-color", "transparent" );
+    }
+});
+
 $(document).ready(function(){
 
     iconMenu=0;
@@ -36,12 +44,4 @@ $(document).ready(function(){
     $('.scrollspy').scrollSpy({
         scrollOffset:100,
     });
-});
-
-$(window).scroll(function() {
-    if ($(".fixed-menu").offset().top > 200) {
-        $(".fixed-menu").css( "background-color", "rgba(90, 0, 20, 0.98)" );
-    }else{
-        $(".fixed-menu").css( "background-color", "transparent" );
-    }
 });

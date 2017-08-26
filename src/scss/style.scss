@@ -239,7 +239,25 @@ main{
             margin-top: 5vh;
         }
         .panels{
-            
+            & > div{
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            .fa{
+                background: #bc2e3a;
+                display: inline-block;
+                border-radius: 50%;
+                color: #fff;
+                padding: 10px;
+            }
+            h5{
+                span{
+                    display: inline-block;
+                    margin-left: 20px;
+                    font-weight: bold;
+                    color: #555;
+                }
+            }
         }
     }
     h1{
