@@ -4,7 +4,7 @@ jQuery(window).on("load",function(){
 
 $(window).on("scroll load",function() {
     if ($(".fixed-menu").offset().top > 200) {
-        $(".fixed-menu").css( "background-color", "rgba(90, 0, 20, 0.98)" );
+        $(".fixed-menu").css( "background-color", "rgba(90, 0, 20, 1)" );
     }else{
         $(".fixed-menu").css( "background-color", "transparent" );
     }

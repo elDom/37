@@ -13,6 +13,12 @@ $menuHeight: 100px;
     font-style: normal;
     font-weight: bold;
 }
+@font-face {
+    font-family: "peace_sans";
+    src: url("../fonts/peace_sans.woff2") format("woff2");
+    font-style: normal;
+    font-weight: normal;
+}
 
 html, body{
     width: 100%;
@@ -206,6 +212,29 @@ header.row{
 
 main{
     color: #333;
+    h1{
+        font-weight: 100;
+        font-family: "peace_sans"; 
+    }
+    .readmore{
+        font-weight: 500;
+        margin-top: 40px;
+        background: #bc2e3a;
+        color: #fff;
+        border-radius: 25px;
+        height: 40px;
+        line-height: 42px;
+        &:hover{
+            background: #8F232C;
+        }
+    }
+    .notebook{
+        margin-top: 5%;
+    }
+    img{
+        width: 100%;
+    }
+
     #aboutus{
         background-image: url("../img/aboutus.png");
         background-repeat: no-repeat;
@@ -222,6 +251,7 @@ main{
     }
     #team{
         position: relative;
+        background-color: #eee;
         &::before{
             content: "";
             display: block;
@@ -234,9 +264,11 @@ main{
             z-index: -1;
             transform: translate(-50%, -50%);
             transform: rotate(45deg);
+            mix-blend-mode: multiply;
+            z-index: 1;
         }
         h1{
-            margin-top: 5vh;
+            margin-top: 5vh;           
         }
         .panels{
             & > div{
@@ -260,26 +292,53 @@ main{
             }
         }
     }
-    h1{
-        font-weight: 900;
-    }
-    .readmore{
-        font-weight: 500;
-        margin-top: 40px;
-        background: #bc2e3a;
-        color: #fff;
-        border-radius: 25px;
-        height: 40px;
-        line-height: 42px;
-        &:hover{
-            background: #8F232C;
+    #service{
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #333;
+            width: 50vh;
+            height: 50vh;
+            bottom: -25vh;
+            left: -40vh;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+            z-index: -1;
         }
-    }
-    .notebook{
-        margin-top: 5%;
-    }
-    img{
-        width: 100%;
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #bc2e3a;
+            width: 100vh;
+            height: 100vh;
+            top: 20vh;
+            right: -50vh;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+            z-index: -10;
+        }
+        p, h1, .readmore{
+            mix-blend-mode: screen;
+        }
+        .service-images{
+            margin-top: 40px;
+            position: relative;
+            img{
+                width: 40%;
+                float: right;
+                margin-right: -7%;
+                transition: all 0.2s;
+                filter: drop-shadow(6px 6px 6px #333);
+                &:hover{
+                    filter: drop-shadow(6px 6px 6px #000);
+                }
+            }
+        }
     }
 }
 
