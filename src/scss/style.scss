@@ -294,6 +294,7 @@ main{
         }
     }
     #service{
+        overflow: hidden;
         position: relative;
         margin-top: -20px;
         background-image: url("../img/service.png");
@@ -459,6 +460,71 @@ main{
                                     z-index: 2;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #clients{
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #bc2e3a;
+            width: 70vh;
+            height: 70vh;
+            top: 20vh;
+            left: -40vh;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            transform: rotate(45deg);
+            //mix-blend-mode: multiply;
+            z-index: -1;
+        }
+        .photo{
+            transition: all 0.5s;
+            background-size: cover;
+            background-image: url("../img/client_1.png");
+            background-position: center center;
+        }
+        .feedback{
+            i.fa-quote-left{
+                padding: 40px 40px 0px 0px;
+                @media screen and (max-width: 600px) {
+                    & {
+                        padding: 40px 0px 0px 0px;
+                    }
+                }
+            }
+            .text{
+                padding: 60px 0px 0px 0px;
+                text-align: justify;
+                transition: all 1s;
+                opacity: 1;
+                @media screen and (max-width: 600px) {
+                    & {
+                        padding: 40px 0px 0px 0px;
+                    }
+                }
+                .author{
+                    margin-top: 30px;
+                    font-weight: bold;
+                }
+            }
+            .feedback-chooser{
+                margin-top: 20px;
+                img{
+                    cursor: pointer;
+                    width: 12%;
+                    margin: 1%;
+                    &:hover{
+                        filter: drop-shadow(2px 2px 2px #000);
+                    }
+                    @media screen and (max-width: 600px) {
+                        & {
+                            width: 20%;
                         }
                     }
                 }
