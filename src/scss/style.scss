@@ -597,7 +597,7 @@ main{
 
 
 .scrollspy{
-    min-height: calc(100vh - #{$menuHeight});
+    min-height: calc(101vh - #{$menuHeight});
 }
 
 .preloader {
