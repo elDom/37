@@ -237,17 +237,31 @@ main{
     }
 
     #aboutus{
-        background-image: url("../img/aboutus.png");
+        position: relative;
+        overflow: hidden;
         background-repeat: no-repeat;
         background-size: auto 100%;
         background-position: -100% 0%;
-        @media screen and (max-width: 1400px) {
-            & {
-                background-position: 200% 0%;
-            }
-        }
         p, h1, .readmore{
             mix-blend-mode: screen;
+        }
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: -20vw;
+            width: 50vw;
+            height: 50vh;
+            border-left: 40vw solid transparent;
+            border-right: 40vw solid transparent;
+            border-top: 100vh solid #333;
+            z-index: -1;
+            @media screen and (max-width: 992px) {
+                & {
+                    display: none;
+                }
+            }
         }
     }
     #team{
@@ -294,15 +308,13 @@ main{
         }
     }
     #service{
-        overflow: hidden;
         position: relative;
         margin-top: -20px;
-        background-image: url("../img/service.png");
         background-position: center right;
         background-repeat: no-repeat;
         @media screen and (max-width: 992px) {
             & {
-                background-image: none;
+                overflow: hidden;
             }
         }
         &::before{
@@ -319,37 +331,30 @@ main{
             transform: rotate(45deg);
             z-index: -1;
         }
-        /* nie dziala overflow hidden
         &::after{
             content: "";
-            display: inline-block;
+            display: block;
             position: absolute;
-            background: #bc2e3a;
-            width: 100vh;
-            height: 100vh;
-            top: 20vh;
-            right: -50vh;
+            top: 0px;
+            right: 0px;
+            width: 0;
+            height: 0;
+            border-top: 50vh solid transparent;
+            border-right: 50vh solid #BC2E39;
+            border-bottom: 50vh solid transparent;
             z-index: -1;
-            transform: translate(-50%, -50%);
-            transform: rotate(45deg);
-            z-index: -10;
-            @media screen and (max-width: 992px) {
-                & {
-                    display: none;
-                }
-            }
         }
-        */
         p, h1, .readmore{
-            mix-blend-mode: screen;
+            //mix-blend-mode: screen;
         }
         .service-images{
             margin-top: 40px;
             position: relative;
+            text-align: center;
             img{
                 width: 40%;
-                float: right;
-                margin-right: -7%;
+                //float: right;
+                margin-right: -10%;
                 transition: all 0.2s;
                 filter: drop-shadow(6px 6px 6px #333);
                 &:hover{
@@ -483,6 +488,18 @@ main{
             //mix-blend-mode: multiply;
             z-index: -1;
         }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 0;
+            height: 0;
+            border-top: 30vh solid #333;
+            border-left: 30vh solid transparent;
+        
+        }              
         .photo{
             transition: all 0.5s;
             background-size: cover;
